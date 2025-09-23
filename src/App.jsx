@@ -2,8 +2,8 @@ import React from 'react'
 
 function App() {
   return (
-    <div>
-      App
+    <div className='text-center uppercase text-2xl font-bold'>
+     Cartify
     </div>
   )
 }
