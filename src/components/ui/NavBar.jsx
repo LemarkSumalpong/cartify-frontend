@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ShoppingCart } from 'lucide-react';
+import { ShoppingCart, User } from 'lucide-react';
 
 const NavBar = () => {
   return (
@@ -24,6 +24,8 @@ const NavBar = () => {
             <div
               className=
                 "flex flex-col absolute right-0 md:right-0 top-12 z-10 bg-zinc-50 p-4 gap-4 "
+
+                
                  
             >
               <li>
@@ -32,6 +34,7 @@ const NavBar = () => {
               <li>
                 <Link to="/my-account" >My Account</Link>
               </li>
+              <User />
             </div>
             
           </ul>
