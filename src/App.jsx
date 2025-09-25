@@ -1,10 +1,8 @@
 import React from 'react'
 
-function App() {
+const App = () => {
   return (
-    <div className='text-center uppercase text-2xl font-bold'>
-     Cartify
-    </div>
+    <div>App</div>
   )
 }
 
