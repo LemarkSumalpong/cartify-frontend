@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
 
 const NavBar = () => {
   return (
-    <div>NavBar</div>
-  )
-}
+    <nav>
+      <div className="container">
+        <Link>CARTIFY</Link>
+        <button type="button">
+            <span>Button</span>
+        </button>
+      </div>
+    </nav>
+  );
+};
 
-export default NavBar
+export default NavBar;
