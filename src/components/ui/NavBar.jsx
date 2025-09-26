@@ -1,3 +1,4 @@
+import { ShoppingCart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
@@ -12,6 +13,9 @@ const NavBar = () => {
             <div className="flex gap-4 font-semibold ">
               <button>Login</button>
               <button>register</button>
+              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800">
+              <ShoppingCart size={20} className=' text-white' />
+             </div>
             </div>
           </ul>
         </div>
