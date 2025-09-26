@@ -15,9 +15,9 @@ const NavBar = () => {
                 <div className="bg-gray-900  w-25 rounded-md">cartify</div>
               </Link>
             </div>
-            <div className="flex gap-4 font-semibold ">
-              <button>Login</button>
-              <button>register</button>
+            <div className="flex gap-4 font-semibold">
+              <button className='cursor-pointer hover:text-blue-500'>Login</button>
+              <button className='cursor-pointer hover:text-blue-500'>Register</button>
               <Link
                 to="/cart"
                 className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800"
