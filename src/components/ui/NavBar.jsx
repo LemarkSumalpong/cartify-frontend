@@ -1,5 +1,6 @@
 import { ShoppingCart } from 'lucide-react';
 import { Link, NavLink } from 'react-router-dom';
+import Navlink from './Navlink';
 
 const NavBar = () => {
   return (
@@ -18,6 +19,7 @@ const NavBar = () => {
             <div className="flex gap-4 font-semibold">
               <button className='cursor-pointer hover:text-blue-500'>Login</button>
               <button className='cursor-pointer hover:text-blue-500'>Register</button>
+              <Navlink />
               <Link
                 to="/cart"
                 className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800"
