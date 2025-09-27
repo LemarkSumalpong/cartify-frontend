@@ -15,10 +15,12 @@ const NavBar = () => {
               >
                 <div className="bg-gray-900   px-3 py-1 rounded-md">cartify</div>
               </Link>
-              <div className="hidden md:flex flex-1 justify-center">
+            </div>
+
+             <div className="hidden md:flex flex-1 justify-center">
                 <Navlink />
               </div>
-            </div>
+              
             <div className="flex gap-4 font-semibold items-center">
               <button className="cursor-pointer hover:text-blue-500">
                 Login
@@ -26,7 +28,6 @@ const NavBar = () => {
               <button className="cursor-pointer hover:text-blue-500">
                 Register
               </button>
-
               <Link
                 to="/cart"
                 className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800"

@@ -2,18 +2,18 @@ import React from 'react'
 
 const Navlink = () => {
   return (
-    <ul className="hidden md:flex gap-6">
+    <ul className="hidden md:flex gap-6 font-semibold text-gray-800/90 ">
     <li>
-        <a href="">Home</a>
+        <a href="" className='hover:text-gray-900/90'>Home</a>
     </li>
      <li>
-        <a href="">Shop</a>
+        <a href="" className='hover:text-gray-900/90'>Shop</a>
     </li>
      <li>
-        <a href="">About</a>
+        <a href="" className='hover:text-gray-900/90'>About</a>
     </li>
      <li>
-        <a href="">Contact</a>
+        <a href="" className='hover:text-gray-900/90'>Contact</a>
     </li>
    </ul>
   )
