@@ -1,15 +1,16 @@
-import React from 'react'
-
+import background from '../../assets/bg/background.png'
 const Header = () => {
   return (
-    <header className='py-5 bg-blue-700'>
-        <div className='container px-4 lg:px-4 py-5'>
-            <div className='text-center text-white/90'>
+    <header className='relative py-5 h-[500px] flex items-center justify-center '>
+        <img src={background} alt=""  className="absolute inset-0 w-full h-full object cover" />
+        <div className='relative z-10 px-4 lg:px-4 py-5 -mt-20'>
+            <div className='text-center text-black/90'>
             <h1 className='text-4xl font-bold'>Welcome to Your Favorite Store</h1>
-            <p className='text-lg font-normal text-white mb-4'>Discover the Latest Trend</p>
+            <p className='text-lg font-normal text-black mb-4'>Discover the Latest Trend</p>
             <a href="#shop" className=' text-black text-2xl  rounded-full bg-white px-3 py-2 shadow-md'>Shop Now</a>
             </div>
         </div>
+       
     </header>
   )
 }
