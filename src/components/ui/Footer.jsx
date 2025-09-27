@@ -11,16 +11,16 @@ const Footer = () => {
   return (
     <footer className="bg-slate-900 shadow-md py-4 px-10 ">
       <div className=" flex px-20 text-white gap-6 justify-center">
-        <a href="#" className="hover:text-blue-400">
+        <a href="#home" className="hover:text-blue-400">
           Home
         </a>
-        <a href="#" className="hover:text-blue-400">
+        <a href="#shop" className="hover:text-blue-400">
           Shop
         </a>
-        <a href="#" className="hover:text-blue-400">
+        <a href="#about" className="hover:text-blue-400">
           About
         </a>
-        <a href="#" className="hover:text-blue-400">
+        <a href="#contact" className="hover:text-blue-400">
           Contact
         </a>
       </div>
