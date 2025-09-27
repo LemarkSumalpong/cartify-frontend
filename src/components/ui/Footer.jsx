@@ -15,10 +15,10 @@ const Footer = () => {
           Home
         </a>
         <a href="#" className="hover:text-blue-400">
-          About
+          Shop
         </a>
         <a href="#" className="hover:text-blue-400">
-          FAQ
+          About
         </a>
         <a href="#" className="hover:text-blue-400">
           Contact
