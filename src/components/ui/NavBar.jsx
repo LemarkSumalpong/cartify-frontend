@@ -8,18 +8,25 @@ const NavBar = () => {
       <>
         <div className="py-4 shadow-md ">
           <ul className="container mx-auto flex flex-wrap justify-between md:flex-row px-4 md:px-2 items-center relative">
-            <div className="flex gap-4 font-semibold">
+            <div className="flex items-center font-semibold">
               <Link
                 className="text-2xl text-white/90 items-center text-justify uppercase font-bold shadow-md"
                 to="/"
               >
-                <div className="bg-gray-900  w-25 rounded-md">cartify</div>
+                <div className="bg-gray-900   px-3 py-1 rounded-md">cartify</div>
               </Link>
+              <div className="hidden md:flex flex-1 justify-center">
+                <Navlink />
+              </div>
             </div>
-            <div className="flex gap-4 font-semibold">
-              <button className='cursor-pointer hover:text-blue-500'>Login</button>
-              <button className='cursor-pointer hover:text-blue-500'>Register</button>
-              <Navlink />
+            <div className="flex gap-4 font-semibold items-center">
+              <button className="cursor-pointer hover:text-blue-500">
+                Login
+              </button>
+              <button className="cursor-pointer hover:text-blue-500">
+                Register
+              </button>
+
               <Link
                 to="/cart"
                 className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800"

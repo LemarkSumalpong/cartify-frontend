@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navlink = () => {
   return (
-   <ul>
+    <ul className="hidden md:flex gap-6">
     <li>
         <a href="">Home</a>
     </li>
