@@ -28,6 +28,7 @@ const HomeCard = () => {
           </div>
         </div>
       </div>
+      
     </Link>
   )
 }
