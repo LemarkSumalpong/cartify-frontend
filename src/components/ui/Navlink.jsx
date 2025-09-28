@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Navlink = () => {
   return (
     <ul className="hidden md:flex gap-6 font-semibold uppercase text-gray-800/90 ">
