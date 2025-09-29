@@ -2,8 +2,9 @@ import { Link } from "react-router-dom"
 
 const HomeCard = () => {
   return (
-     <Link>
+    
       <div className="w-full max-w-xs sm:max-w-sm md:max-w-[14rem] lg:max-w-[16rem] h-auto shadow-lg rounded-md cursor-pointer flex flex-col">
+         <Link>
         {/* Image */}
         <div className="w-full h-40 flex items-center justify-center rounded-t-md bg-white">
           <img
@@ -27,9 +28,10 @@ const HomeCard = () => {
           
           </div>
         </div>
+         </Link>
       </div>
       
-    </Link>
+   
   )
 }
 
