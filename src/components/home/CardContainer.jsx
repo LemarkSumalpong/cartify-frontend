@@ -7,12 +7,12 @@ const CardContainer = () => {
         Our Products
       </h4>
       <div className="container mx-auto px-4 lg:px-4 mt-5">
-        <div className="flex justify-center px-4">
+        <div className="flex justify-center gap-4">
           <HomeCard />
           <HomeCard />
           <HomeCard />
           <HomeCard />
-           <HomeCard />
+          <HomeCard />
         </div>
       </div>
     </section>

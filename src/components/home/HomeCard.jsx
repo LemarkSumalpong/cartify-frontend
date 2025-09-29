@@ -16,7 +16,7 @@ const HomeCard = () => {
           </h3>
 
           <div className="flex justify-center items-center mt-4">
-            <p className="text-yellow-700 font-semibold">{''} Product Price</p>
+            <p className="text-yellow-700 font-semibold">{''}₱9,999</p>
           </div>
         </div>
       </Link>
