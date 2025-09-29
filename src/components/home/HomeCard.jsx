@@ -1,17 +1,12 @@
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom';
 
 const HomeCard = () => {
   return (
-    
-      <div className="w-full max-w-xs sm:max-w-sm md:max-w-[14rem] lg:max-w-[16rem] h-auto shadow-lg rounded-md cursor-pointer flex flex-col">
-         <Link>
+    <div className="w-full max-w-xs sm:max-w-sm md:max-w-[14rem] lg:max-w-[16rem] h-auto shadow-lg rounded-md cursor-pointer flex flex-col">
+      <Link>
         {/* Image */}
         <div className="w-full h-40 flex items-center justify-center rounded-t-md bg-white">
-          <img
-            src={''}
-            alt={''}
-            className="max-h-full object-contain"
-          />
+          <img src={''} alt={''} className="max-h-full object-contain" />
         </div>
 
         {/* Details */}
@@ -21,18 +16,12 @@ const HomeCard = () => {
           </h3>
 
           <div className="flex justify-center items-center mt-4">
-            <p className="text-yellow-700 font-semibold">
-              {''} Product Price
-            </p>
-
-          
+            <p className="text-yellow-700 font-semibold">{''} Product Price</p>
           </div>
         </div>
-         </Link>
-      </div>
-      
-   
-  )
-}
+      </Link>
+    </div>
+  );
+};
 
-export default HomeCard
+export default HomeCard;
