@@ -7,7 +7,6 @@ const HomePage = () => {
    <>
    <Header />
    <CardContainer />
-   <HomeCard />
    </>
   )
 }
