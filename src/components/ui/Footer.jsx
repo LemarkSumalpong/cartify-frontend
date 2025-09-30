@@ -27,9 +27,6 @@ const Footer = () => {
 
       <div className="border-t border-gray-700 mt-2">
         <div className="flex flex-col items-center justify-center py-6 gap-4">
-          <p className="text-blue-400 text-sm">
-            &copy; 2025 Cartify. All rights reserved.
-          </p>
           <div className="flex gap-4 text-white/70 items-center">
             <Facebook className="cursor-pointer hover:text-blue-400 transition" />
             <Linkedin className="cursor-pointer hover:text-blue-500 transition" />
