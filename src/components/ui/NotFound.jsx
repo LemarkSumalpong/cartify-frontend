@@ -3,7 +3,7 @@ import bg2 from '../../assets/bg/bg2.jpg';
 
 const NotFound = () => {
   return (
-   <header className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[530px] flex items-center justify-center">
+   <header className="relative h-[730px] sm:h-[450px] md:h-[500px] lg:h-[530px] flex items-center justify-center">
       <img
         src={bg2}
         alt=""
