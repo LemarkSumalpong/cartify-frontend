@@ -15,7 +15,7 @@ const Header = () => {
           </p>
           <a
             href="#shop"
-            className="text-black/90 uppercase font-semibold text-lg md:text-xl lg:text-2xl rounded-full bg-blue-400 border-b-3
+            className="text-white/70 uppercase font-semibold text-lg md:text-xl lg:text-2xl rounded-full bg-blue-500 border-b-3
              border-blue-700 px-3 py-2 shadow-md hover:bg-blue-500"
           >
             Shop Now
