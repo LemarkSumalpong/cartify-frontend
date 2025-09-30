@@ -3,7 +3,7 @@ import bg2 from '../../assets/bg/bg2.jpg';
 
 const NotFound = () => {
   return (
-    <header className="relative min-h-screen flex items-center justify-center">
+   <header className="relative h-[400px] sm:h-[450px] md:h-[500px] lg:h-[530px] flex items-center justify-center">
       <img
         src={bg2}
         alt=""
@@ -20,7 +20,7 @@ const NotFound = () => {
         <div className="mt-6">
           <Link
             to="/"
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-2xl px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
             Home
           </Link>
