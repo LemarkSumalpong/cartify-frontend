@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import background from '../../assets/bg/background.png';
 
 const HomeCard = () => {
   return (
@@ -6,7 +7,7 @@ const HomeCard = () => {
       <Link>
         {/* Image */}
         <div className="w-full h-40 flex items-center justify-center rounded-t-md bg-white">
-          <img src={''} alt={''} className="max-h-full object-contain" />
+          <img src={background} alt={''} className="max-h-full object-contain" />
         </div>
 
         {/* Details */}

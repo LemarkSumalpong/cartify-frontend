@@ -1,18 +1,25 @@
-import api from '../../../api'
-import CardContainer from './CardContainer'
-import Header from './Header'
-import HomeCard from './HomeCard'
+import { useEffect } from 'react';
+import api from '../../../api';
+import CardContainer from './CardContainer';
+import Header from './Header';
+import HomeCard from './HomeCard';
 
 const HomePage = () => {
-
-  api.get("products")
+  useEffect(function () {
+    api.get('products').then((res) => {
+      console.log(res.data);
+    })
+    .catch(err =>{
+      console.log(err.message)
+    })
+  }, []);
 
   return (
-   <>
-   <Header />
-   <CardContainer />
-   </>
-  )
-}
+    <>
+      <Header />
+      <CardContainer />
+    </>
+  );
+};
 
-export default HomePage
+export default HomePage;
