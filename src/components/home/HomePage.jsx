@@ -20,7 +20,7 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <CardContainer />
+      <CardContainer products={products} />
     </>
   );
 };
