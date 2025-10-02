@@ -1,6 +1,6 @@
 import HomeCard from './HomeCard';
 
-const CardContainer = (products) => {
+const CardContainer = ({products}) => {
   return (
     <section className="py-5" id="shop">
       <h4 className="text-center justify-center text-3xl font-semibold text-gray/70">
