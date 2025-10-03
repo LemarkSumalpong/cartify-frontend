@@ -16,7 +16,7 @@ const HomeCard = ({product}) => {
           </h3>
 
           <div className="flex justify-center items-center mt-4">
-            <p className="text-yellow-700 font-semibold">₱{product.price}</p>
+            <p className="text-yellow-700 font-semibold"> ₱{formatPrice(product.price)}</p>
           </div>
         </div>
       </Link>
