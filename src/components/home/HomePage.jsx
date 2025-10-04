@@ -2,7 +2,6 @@ import { use, useEffect, useState } from 'react';
 import api from '../../../api';
 import CardContainer from './CardContainer';
 import Header from './Header';
-import HomeCard from './HomeCard';
 import PlaceHolderContainer from '../ui/PlaceHolderContainer';
 
 const HomePage = () => {
@@ -10,6 +9,7 @@ const HomePage = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(function () {
+    setLoading(true)
     api
       .get('products')
       .then((res) => {
@@ -18,14 +18,22 @@ const HomePage = () => {
       })
       .catch((err) => {
         console.log(err.message);
-      });
+        setLoading(false)
+      })
+       .finally(() => {
+      setLoading(false);
+    });
   }, []);
 
   return (
     <>
-      <Header />
+       <Header />
+
+    {products.length === 0 ? (
       <PlaceHolderContainer />
+    ) : (
       <CardContainer products={products} />
+    )}
     </>
   );
 };
