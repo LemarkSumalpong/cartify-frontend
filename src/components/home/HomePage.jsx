@@ -3,6 +3,7 @@ import api from '../../../api';
 import CardContainer from './CardContainer';
 import Header from './Header';
 import HomeCard from './HomeCard';
+import PlaceHolderContainer from '../ui/PlaceHolderContainer';
 
 const HomePage = () => {
   const [products, setProducts] = useState([]);
@@ -23,6 +24,7 @@ const HomePage = () => {
   return (
     <>
       <Header />
+      <PlaceHolderContainer />
       <CardContainer products={products} />
     </>
   );
