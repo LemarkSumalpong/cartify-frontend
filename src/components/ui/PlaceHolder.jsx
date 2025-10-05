@@ -1,5 +1,3 @@
-import React from 'react';
-
 const PlaceHolder = () => {
   return (
     <div className="w-full max-w-xs sm:max-w-sm md:max-w-[14rem] lg:max-w-[16rem] h-auto shadow-lg rounded-md flex flex-col animate-pulse">
