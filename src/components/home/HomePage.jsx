@@ -28,7 +28,6 @@ const HomePage = () => {
   return (
     <>
        <Header />
-
     {products.length === 0 ? (
       <PlaceHolderContainer />
     ) : (
