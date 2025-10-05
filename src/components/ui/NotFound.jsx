@@ -3,7 +3,7 @@ import bg2 from '../../assets/bg/bg2.jpg';
 
 const NotFound = () => {
   return (
-   <header className="relative h-[730px] sm:h-[450px] md:h-[500px] lg:h-[530px] flex items-center justify-center">
+    <header className="relative h-[730px] sm:h-[450px] md:h-[500px] lg:h-[530px] flex items-center justify-center">
       <img
         src={bg2}
         alt=""
@@ -13,8 +13,8 @@ const NotFound = () => {
       <div className="relative z-10 text-center text-white px-4">
         <h1 className="text-5xl font-semibold">Page not Found</h1>
         <p className="mt-4 max-w-2xl mx-auto">
-          We’re sorry, but the page you’re trying to access cannot be found.
-          It may have been moved, deleted, or is currently unavailable. Please
+          We’re sorry, but the page you’re trying to access cannot be found. It
+          may have been moved, deleted, or is currently unavailable. Please
           check the URL or return to the homepage.
         </p>
         <div className="mt-6">
