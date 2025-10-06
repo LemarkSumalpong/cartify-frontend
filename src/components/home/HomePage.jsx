@@ -1,12 +1,14 @@
-import { use, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import api from '../../../api';
 import CardContainer from './CardContainer';
 import Header from './Header';
 import PlaceHolderContainer from '../ui/PlaceHolderContainer';
+import Error from '../ui/Error'
 
 const HomePage = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(function () {
     setLoading(true)
@@ -18,7 +20,7 @@ const HomePage = () => {
       })
       .catch((err) => {
         console.log(err.message);
-        setLoading(false)
+        setError(err);
       })
        .finally(() => {
       setLoading(false);
@@ -28,11 +30,15 @@ const HomePage = () => {
   return (
     <>
        <Header />
-    {products.length === 0 ? (
-      <PlaceHolderContainer />
-    ) : (
-      <CardContainer products={products} />
-    )}
+    {loading ? (
+        <PlaceHolderContainer />
+      ) : error ? (
+        <Error error={error} />
+      ) : products.length === 0 ? (
+        <PlaceHolderContainer />
+      ) : (
+        <CardContainer products={products} />
+      )}
     </>
   );
 };
