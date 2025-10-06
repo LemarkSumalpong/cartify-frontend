@@ -28,11 +28,8 @@ const HomePage = () => {
   return (
     <>
        <Header />
-    {products.length === 0 ? (
-      <PlaceHolderContainer />
-    ) : (
-      <CardContainer products={products} />
-    )}
+      {loading ? <PlaceHolderContainer /> :  <CardContainer products={products} />}
+     
     </>
   );
 };
