@@ -5,7 +5,7 @@ import { BASE_URL } from '../../../api';
 const HomeCard = ({ product }) => {
   return (
     <div className="w-full max-w-xs sm:max-w-sm md:max-w-[14rem] lg:max-w-[16rem] h-auto shadow-lg rounded-md cursor-pointer flex flex-col">
-      <Link>
+      <Link to='/detail'>
         <div className="w-full h-40 flex items-center justify-center rounded-t-md bg-white">
           <img
             src={`${BASE_URL}${product.image}`}
