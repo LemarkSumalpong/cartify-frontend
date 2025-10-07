@@ -31,12 +31,15 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      {error && <Error error={error} />}
-      {products.length === 0 ? (
-        <PlaceHolderContainer />
-      ) : (
-        <CardContainer products={products} />
-      )}
+      {loading ? (
+      <PlaceHolderContainer />
+    ) : error ? (
+      <Error error={error} />
+    ) : products.length === 0 ? (
+      <PlaceHolderContainer />
+    ) : (
+      <CardContainer products={products} />
+    )}
     </>
   );
 };
