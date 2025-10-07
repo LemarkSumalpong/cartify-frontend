@@ -18,7 +18,7 @@ const Error = ({error}) => {
       <img
         src={errorRobot}
         alt="Error robot"
-        className="w-64 mb-6 animate-bounce"
+        className="w-64 mb-6 animate-pulse"
       />
         <h1 className="text-3xl font-bold text-red-600">Error Occured</h1>
          <p className="text-gray-700 mt-2">
