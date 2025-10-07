@@ -31,7 +31,7 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      {error && <Error />}
+      {error && <Error error={error} />}
       {products.length === 0 ? (
         <PlaceHolderContainer />
       ) : (
