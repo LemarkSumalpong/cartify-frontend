@@ -3,39 +3,36 @@ import api from '../../../api';
 import CardContainer from './CardContainer';
 import Header from './Header';
 import PlaceHolderContainer from '../ui/PlaceHolderContainer';
-import Error from '../ui/Error'
+import Error from '../ui/Error';
 
 const HomePage = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
 
   useEffect(function () {
-    setLoading(true)
+    setLoading(true);
     api
       .get('products')
       .then((res) => {
         console.log(res.data);
         setProducts(res.data);
-        setError("");
+        setError('');
       })
       .catch((err) => {
         console.log(err.message);
         setError(err.message);
       })
-       .finally(() => {
-      setLoading(false);
-    });
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
   return (
     <>
-       <Header />
-    {loading ? (
-        <PlaceHolderContainer />
-      ) : error ? (
-        <Error error={error} />
-      ) : products.length === 0 ? (
+      <Header />
+      {error && <Error />}
+      {products.length === 0 ? (
         <PlaceHolderContainer />
       ) : (
         <CardContainer products={products} />
