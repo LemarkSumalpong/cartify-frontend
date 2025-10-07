@@ -8,7 +8,7 @@ import Error from '../ui/Error'
 const HomePage = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState("");
 
   useEffect(function () {
     setLoading(true)
@@ -17,10 +17,11 @@ const HomePage = () => {
       .then((res) => {
         console.log(res.data);
         setProducts(res.data);
+        setError("");
       })
       .catch((err) => {
         console.log(err.message);
-        setError(err);
+        setError(err.message);
       })
        .finally(() => {
       setLoading(false);
