@@ -13,6 +13,10 @@ const ProductPage = () => {
            <div className="w-full md:w-1/2">
            <div className="sm:mb-1">Test</div>
            <h1 className="text-2xl font-semibold">Text 1</h1>
+           <div className="text-sm mv-5">
+            <span className="line-through">$45.00</span>
+            <span>$45.00</span>
+           </div>
           </div>
         </div>
       </section>
