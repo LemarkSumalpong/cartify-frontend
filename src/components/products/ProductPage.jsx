@@ -1,9 +1,12 @@
 import { ShoppingCart } from 'lucide-react';
 import errorRobot from '../../assets/bg/errorRobot.png';
+import RelatedProducts from './RelatedProducts';
+import ProductPageHolder from './ProductPageHolder';
 
 const ProductPage = () => {
   return (
     <div className="bg-white min-h-screen">
+      <ProductPageHolder />
       <section className="py-6">
         <div className="container mx-auto px-4 md:px-8"> 
           <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
@@ -54,6 +57,7 @@ const ProductPage = () => {
           </div>
         </div>
       </section>
+      <RelatedProducts />
     </div>
   );
 };
