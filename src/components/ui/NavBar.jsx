@@ -13,21 +13,30 @@ const NavBar = () => {
                 className="text-2xl text-white/90 items-center text-justify uppercase font-bold shadow-md"
                 to="/"
               >
-                <div className="bg-gray-900   px-3 py-1 rounded-md">cartify</div>
+                <div className="bg-gray-900   px-3 py-1 rounded-md">
+                  cartify
+                </div>
               </Link>
             </div>
 
-             <div className="hidden md:flex flex-1 justify-center">
-                <Navlink />
-              </div>
-              
+            <div className="hidden md:flex flex-1 justify-center">
+              <Navlink />
+            </div>
+
             <div className="flex gap-4 font-semibold items-center">
-              <button className="cursor-pointer hover:text-blue-500">
-                Login
-              </button>
-              <button className="cursor-pointer hover:text-blue-500">
-                Register
-              </button>
+              <Link to="/login">
+                {' '}
+                <button className="cursor-pointer hover:text-blue-500">
+                  Login
+                </button>
+              </Link>
+              
+              <Link to="/register">
+                <button className="cursor-pointer hover:text-blue-500">
+                  Register
+                </button>
+              </Link>
+
               <Link
                 to="/cart"
                 className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800"
