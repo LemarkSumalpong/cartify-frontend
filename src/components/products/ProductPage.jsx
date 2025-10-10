@@ -14,6 +14,9 @@ const ProductPage = () => {
     .then(res => {
       console.log(res.data)
     })
+    .catch(err => {
+      console.log(err.message)
+    })
     }, [])
  
   return (
