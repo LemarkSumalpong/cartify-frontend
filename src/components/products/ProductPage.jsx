@@ -4,13 +4,17 @@ import RelatedProducts from './RelatedProducts';
 import ProductPageHolder from './ProductPageHolder';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
+import api from '../../api/api';
 
 const ProductPage = () => {
   const {slug} = useParams()
 
   useEffect(function(){
-
-  }, [])
+    api.get(`product_detail/${slug}`)
+    .then(res => {
+      console.log(res.data)
+    })
+    }, [])
  
   return (
     <div className="bg-white min-h-screen">
