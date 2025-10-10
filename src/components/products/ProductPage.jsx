@@ -3,16 +3,19 @@ import errorRobot from '../../assets/bg/errorRobot.png';
 import RelatedProducts from './RelatedProducts';
 import ProductPageHolder from './ProductPageHolder';
 import { useParams } from 'react-router-dom';
-import { useEffect } from 'react';
-import api from '../../api/api';
+import { useEffect, useState } from 'react';
+import api from '../../../api';
 
 const ProductPage = () => {
   const {slug} = useParams()
+  const [product, setProduct] = useState({});
+  const [similarProducts, setSimilarProducts] = useState([]);
 
   useEffect(function(){
     api.get(`product_detail/${slug}`)
     .then(res => {
       console.log(res.data)
+      setSimilarProducts(res.data.similar_products)
     })
     .catch(err => {
       console.log(err.message)
