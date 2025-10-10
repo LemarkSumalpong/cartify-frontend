@@ -2,8 +2,15 @@ import { ShoppingCart } from 'lucide-react';
 import errorRobot from '../../assets/bg/errorRobot.png';
 import RelatedProducts from './RelatedProducts';
 import ProductPageHolder from './ProductPageHolder';
+import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const ProductPage = () => {
+  const {slug} = useParams()
+
+  useEffect(function(){
+
+  }, [])
  
   return (
     <div className="bg-white min-h-screen">
