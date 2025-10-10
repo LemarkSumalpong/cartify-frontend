@@ -1,5 +1,5 @@
 import { ShoppingCart } from 'lucide-react';
-import errorRobot from '../../assets/bg/errorRobot.png';
+import { BASE_URL } from '../../../api';
 import RelatedProducts from './RelatedProducts';
 import ProductPageHolder from './ProductPageHolder';
 import { useParams } from 'react-router-dom';
@@ -10,15 +10,20 @@ const ProductPage = () => {
   const {slug} = useParams()
   const [product, setProduct] = useState({});
   const [similarProducts, setSimilarProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(function(){
+    setLoading(true)
     api.get(`product_detail/${slug}`)
     .then(res => {
       console.log(res.data)
+      setProduct(res.data)
       setSimilarProducts(res.data.similar_products)
+      setLoading(false)
     })
     .catch(err => {
       console.log(err.message)
+      setLoading(false)
     })
     }, [])
  
@@ -30,8 +35,8 @@ const ProductPage = () => {
           <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
             <div className="w-full md:w-1/2 flex justify-center">
               <img
-                className="w-full max-w-md md:max-w-full h-auto object-cover rounded-lg shadow-md"
-                src={errorRobot}
+                className="max-h-full object-contain rounded-lg shadow-md"
+                  src={`${BASE_URL}${product.image}`}
                 alt="Product"
               />
             </div>
@@ -39,19 +44,16 @@ const ProductPage = () => {
             <div className="w-full md:w-1/2">
               <div className="text-gray-500 text-sm mb-1">Test</div>
               <h1 className="text-2xl md:text-3xl font-semibold mb-3">
-                Text 1
+                  {product?.name}
               </h1>
               
               <div className="text-base md:text-lg my-4">
                 <span className="line-through mr-3 text-gray-400">$45.00</span>
-                <span className="text-orange-600 font-semibold">$45.00</span>
+                <span className="text-orange-600 font-semibold">₱{product.price}</span>
               </div>
 
               <p className="font-light text-justify text-gray-700 leading-relaxed mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                lacus magna, euismod at viverra pharetra, cursus pellentesque
-                libero. Etiam scelerisque urna ut leo varius, id ornare lorem
-                condimentum. Nullam scelerisque neque vel convallis porta.
+               {product.description}
               </p>
 
               <div className="flex flex-col sm:flex-row sm:items-center gap-3">
