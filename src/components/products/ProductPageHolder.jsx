@@ -6,7 +6,7 @@ const ProductPageHolder = () => {
           <div className="flex flex-col md:flex-row items-center md:items-start gap-10 animate-pulse">
             
             <div className="w-full md:w-1/2 flex justify-center">
-              <div className="w-full max-w-md md:max-w-full h-72 bg-gray-300 rounded-lg shadow-md"></div>
+              <div className="w-full max-w-md md:max-w-full h-72 bg-gray-300 rounded-md shadow-md"></div>
             </div>
 
             <div className="w-full md:w-1/2 flex flex-col gap-4">
